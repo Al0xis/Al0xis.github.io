@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tacos 4 life</title>
+    <link rel="stylesheet" href="mybulma/css/mystyles.css">
+    <script defer src="https://use.fontawesome.com/releases/v6.0.0/js/all.js"></script>
+    <style>
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <figure class="image is-64x64">
+          <image src="images/taco.png">
+        </figure>
+      </div>
+      <div  id="navbarMenu" class="navbar-menu">
+        <div class="navbar-start">
+          <h1 class="title navbar-item is-family-sans-serif"> Mi Pastor </h1>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Menu
+            </a>
+            <div class="navbar-dropdown">
+              <a ref="#galeria" class="navbar-item">
+                Información
+              </a>
+              <a class="navbar-item">
+                Galería
+              </a>
+              <a class="navbar-item">
+                Contacto
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero is-small">
+      <div class="tile is-ancestor">
+        <div class="tile is-4 is-vertical is-parent">
+          <div class="tile is-child box notification is-primary">
+            <p class="title"> Mi Pastor </p>
+            <p> Durante cincuenta años esta taquería ha ofrecido comida de gran calidad a sabor a todos sus clientes. </p>
+            <p> Siempre buscamos dar el mejor servicio porque nuestros clientes son como familia.  </p>
+          </div>
+          <div class="tile is-child box notification is-primary">
+            <p class="title"> Productos </p>
+            <p> Además de tacos les ofrecemos los siguientes productos: </p>
+            <div class="center">
+              <ul style="list-style-type:square">
+                <li> Quesadillas </li>
+                <li> Volcanes </li>
+                <li> Tortas </li>
+                <li> Alambres </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tile is parent">
+          <div class="tile is-child box notification is-primary">
+            <p class="title"> Ubicación </p>
+            <div id="googleMap" style="width:100%;height:400px;"></div>
+            <script>
+              function myMap() {
+              var mapProp= {
+                center:new google.maps.LatLng(20.50738777980539, -101.19291821996413),
+                zoom:15,
+              };
+              var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+              }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeOJ4ANU9ZllZVBuADsvipcS3uRtzb-gc&callback=myMap"></script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="hero has-carousel">
+      <div class="hero-body">
+        <div id="carousel-tacos" class="carousel">
+          <div class="carousel-item">
+            <figure class="image">
+              <image src="images/taco_1.jpg">
+            </figure>
+            <div class="title center"> Taco de Bistec </div>
+          </div>
+          <div class="carousel-item">
+            <figure class="image">
+              <image src="images/taco_2.jpg">
+            </figure>
+            <div class="title center"> Taco de Barbacoa </div>
+          </div>
+          <div class="carousel-item">
+            <figure class="image">
+              <image src="images/taco_3.jpg">
+            </figure>
+            <div class="title center"> Taco de Costilla </div>
+          </div>
+          <div class="carousel-item">
+            <figure class="image">
+              <image src="images/taco_4.jpg">
+            </figure>
+            <div class="title center"> Taco de Pastor </div>
+          </div>
+          <div class="carousel-item">
+            <figure class="image">
+              <image src="images/taco_6.jpg">
+            </figure>
+            <div class="title center"> Taco de Chorizo </div>
+          </div>
+        </div>
+      </div>
+		</section>
+		<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+		<script>
+		bulmaCarousel.attach('#carousel-tacos', {
+			slidesToScroll: 1,
+			slidesToShow: 2,
+      pagination: false,
+      infinite: true
+		});
+		</script>
+
+    <section class="section">
+      <div class="container">
+        <div class="notification is-primary">
+          <p class="title"> Ayudanos a mejorar o pregunta por nuestro servicio de banquetes </p>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input" type="text" placeholder="Nombre">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input" type="email" placeholder="Correo">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field is-expanded">
+                <div class="field has-addons">
+                  <p class="control">
+                    <a class="button is-static">
+                      +52
+                    </a>
+                  </p>
+                  <p class="control is-expanded">
+                    <input class="input" type="tel" placeholder="Numero de telefono">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <textarea class="textarea" placeholder="Comentarios"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field is-grouped is-grouped-right">
+                <div class="control">
+                  <button class="button is-success">
+                    Enviar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer is-dark">
+      <p class="center"> Siguenos en </p>
+      <div class="content center">
+        <span class="icon is-large">
+          <i class="fab fa-facebook-f"></i>
+        </span>
+        <span class="icon is-large">
+          <i class="fab fa-twitter"></i>
+        </span>
+        <span class="icon is-large">
+          <i class="fab fa-instagram"></i>
+        </span>
+        <span class="icon is-large">
+          <i class="fab fa-tiktok"></i>
+        </span>
+      </div>
+    </footer>
+
+  </body>
+</html>
